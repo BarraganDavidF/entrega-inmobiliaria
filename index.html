@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Hábitat Inmobiliaria · Comprar o arrendar inmuebles</title>
+<meta name="description" content="Busca inmuebles en venta o arriendo y guarda tus favoritos.">
+<link rel="stylesheet" href="css/styles.css">
+</head>
+<body data-page="inicio">
+<a class="skip" href="#contenido">Saltar al contenido</a>
+<header class="site-header">
+  <div class="wrap">
+    <div class="bar">
+      <a class="logo" href="index.html" aria-label="Hábitat Inmobiliaria, ir al inicio">Hábitat<span>.</span></a>
+      <button id="menu-btn" type="button" aria-expanded="false" aria-controls="nav-principal">Menú <span class="badge" data-fav-badge hidden><span data-fav-count>0</span><span class="sr-only"> favoritos guardados</span></span></button>
+    </div>
+    <div class="header-wrap">
+    <nav id="nav-principal" aria-label="Principal">
+      <a href="resultados.html?op=venta">Comprar</a>
+      <a href="resultados.html?op=arriendo">Arrendar</a>
+      <a href="favoritos.html">Favoritos <span class="badge" data-fav-badge hidden><span data-fav-count>0</span><span class="sr-only"> guardados</span></span></a>
+      <a href="ayuda.html">Servicios y ayuda</a>
+      <a href="cuenta.html">Mi cuenta</a>
+    </nav>
+    </div>
+  </div>
+</header>
+
+<main id="contenido">
+  <section class="hero" aria-labelledby="t-hero">
+    <div class="wrap">
+      <h1 id="t-hero">Encuentra tu próximo hogar</h1>
+      <p>Busca inmuebles en venta o arriendo con datos completos y actualizados, y guarda tus favoritos para compararlos después.</p>
+      <div class="busq">
+        <div class="tabs" role="tablist" aria-label="¿Qué quieres hacer?">
+          <button type="button" role="tab" aria-selected="false" data-op="venta">Comprar</button>
+          <button type="button" role="tab" aria-selected="true" data-op="arriendo">Arrendar</button>
+        </div>
+        <form id="busqueda-rapida" action="resultados.html" method="get" data-op="arriendo">
+          <input type="hidden" name="op" id="q-op" value="arriendo">
+          <div class="fila">
+            <div class="campo"><label for="q-ciudad">Ciudad</label><select id="q-ciudad" name="ciudad"></select></div>
+            <div class="campo"><label for="q-barrio">Barrio (opcional)</label><input id="q-barrio" name="barrio" placeholder="Ej.: Chapinero"></div>
+            <div class="campo"><label for="q-pmax">Precio máximo (COP)</label><input id="q-pmax" name="pmax" type="number" inputmode="numeric" min="0" step="100000" placeholder="Ej.: 3000000"></div>
+            <div class="campo"><button class="btn" id="btn-buscar" type="submit">Buscar inmuebles en arriendo</button></div>
+          </div>
+        </form>
+      </div>
+    </div>
+  </section>
+  <section class="seccion" aria-labelledby="t-dest">
+    <div class="wrap">
+      <h2 id="t-dest">Publicados recientemente</h2>
+      <div class="grid" id="destacados"></div>
+      <p style="margin-top:16px"><a class="btn secundario" href="resultados.html?op=arriendo">Ver todos los inmuebles</a></p>
+    </div>
+  </section>
+  <section class="seccion" aria-labelledby="t-como">
+    <div class="wrap">
+      <h2 id="t-como">Así de simple</h2>
+      <ol class="pasos">
+        <li><span class="n" aria-hidden="true">1</span><h3>Filtra</h3><p>Elige ciudad, precio, habitaciones y más para ver solo lo que te sirve.</p></li>
+        <li><span class="n" aria-hidden="true">2</span><h3>Guarda</h3><p>Marca con ♥ los inmuebles que te gustan y encuéntralos en Favoritos.</p></li>
+        <li><span class="n" aria-hidden="true">3</span><h3>Compara y contacta</h3><p>Compara hasta tres inmuebles y escribe a la inmobiliaria desde la ficha.</p></li>
+      </ol>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <div class="wrap">
+    <ul>
+      <li><a href="resultados.html?op=venta">Comprar</a></li>
+      <li><a href="resultados.html?op=arriendo">Arrendar</a></li>
+      <li><a href="favoritos.html">Favoritos</a></li>
+      <li><a href="ayuda.html#faq">Preguntas frecuentes</a></li>
+      <li><a href="ayuda.html#contacto">Contacto</a></li>
+    </ul>
+    <p>Prototipo académico. Los inmuebles, precios y datos de contacto son ficticios.</p>
+  </div>
+</footer>
+<div id="anuncio" role="status" aria-live="polite"></div>
+<script src="js/data.js"></script>
+<script src="js/app.js"></script>
+</body>
+</html>

@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Resultados · Hábitat Inmobiliaria</title>
+<meta name="description" content="Filtra y compara inmuebles en venta o arriendo.">
+<link rel="stylesheet" href="css/styles.css">
+</head>
+<body data-page="resultados">
+<a class="skip" href="#contenido">Saltar al contenido</a>
+<header class="site-header">
+  <div class="wrap">
+    <div class="bar">
+      <a class="logo" href="index.html" aria-label="Hábitat Inmobiliaria, ir al inicio">Hábitat<span>.</span></a>
+      <button id="menu-btn" type="button" aria-expanded="false" aria-controls="nav-principal">Menú <span class="badge" data-fav-badge hidden><span data-fav-count>0</span><span class="sr-only"> favoritos guardados</span></span></button>
+    </div>
+    <div class="header-wrap">
+    <nav id="nav-principal" aria-label="Principal">
+      <a href="resultados.html?op=venta">Comprar</a>
+      <a href="resultados.html?op=arriendo">Arrendar</a>
+      <a href="favoritos.html">Favoritos <span class="badge" data-fav-badge hidden><span data-fav-count>0</span><span class="sr-only"> guardados</span></span></a>
+      <a href="ayuda.html">Servicios y ayuda</a>
+      <a href="cuenta.html">Mi cuenta</a>
+    </nav>
+    </div>
+  </div>
+</header>
+
+<main id="contenido">
+  <div class="wrap">
+    <div class="cabecera-res">
+      <h1 id="titulo-res">Inmuebles</h1>
+      <p id="conteo" role="status" aria-live="polite"></p>
+    </div>
+    <div class="layout-res">
+      <details class="panel-filtros" open>
+        <summary id="resumen-filtros">Filtros</summary>
+        <form id="filtros" aria-label="Filtros de búsqueda">
+          <div class="campo"><label for="f-op">Operación</label>
+            <select id="f-op" name="op"><option value="arriendo">Arrendar</option><option value="venta">Comprar</option></select></div>
+          <div class="campo"><label for="f-ciudad">Ciudad</label><select id="f-ciudad" name="ciudad"></select></div>
+          <div class="campo"><label for="f-barrio">Barrio</label><input id="f-barrio" name="barrio" placeholder="Ej.: Laureles"></div>
+          <div class="campo"><label for="f-tipo">Tipo de inmueble</label>
+            <select id="f-tipo" name="tipo"><option value="">Casa o apartamento</option><option value="casa">Casa</option><option value="apartamento">Apartamento</option></select></div>
+          <fieldset style="border:0;padding:0;margin:0"><legend style="font-weight:600;margin-bottom:4px">Precio (COP)</legend>
+            <div class="rango">
+              <div><label for="f-pmin" class="sr-only">Precio mínimo</label><input id="f-pmin" name="pmin" type="number" inputmode="numeric" min="0" step="100000" placeholder="Mínimo"></div>
+              <div><label for="f-pmax" class="sr-only">Precio máximo</label><input id="f-pmax" name="pmax" type="number" inputmode="numeric" min="0" step="100000" placeholder="Máximo"></div>
+            </div></fieldset>
+          <div class="rango">
+            <div class="campo"><label for="f-hab">Habitaciones</label><select id="f-hab" name="hab"><option value="">Todas</option><option value="1">1 o más</option><option value="2">2 o más</option><option value="3">3 o más</option><option value="4">4 o más</option></select></div>
+            <div class="campo"><label for="f-banos">Baños</label><select id="f-banos" name="banos"><option value="">Todos</option><option value="1">1 o más</option><option value="2">2 o más</option><option value="3">3 o más</option></select></div>
+          </div>
+          <div class="rango">
+            <div class="campo"><label for="f-area">Área mínima (m²)</label><input id="f-area" name="area" type="number" inputmode="numeric" min="0" step="10" placeholder="Ej.: 60"></div>
+            <div class="campo"><label for="f-parq">Parqueadero</label><select id="f-parq" name="parq"><option value="">Indiferente</option><option value="si">Con parqueadero</option></select></div>
+          </div>
+          <button type="button" class="btn secundario" id="limpiar">Limpiar filtros</button>
+        </form>
+      </details>
+      <section aria-label="Lista de inmuebles">
+        <div class="barra-res">
+          <ul class="chips" id="chips" aria-label="Filtros aplicados"></ul>
+          <div class="campo"><label for="f-orden">Ordenar por</label>
+            <select id="f-orden" name="orden"><option value="reciente">Más recientes</option><option value="precio-asc">Precio: menor a mayor</option><option value="precio-desc">Precio: mayor a menor</option></select></div>
+        </div>
+        <h2 class="sr-only">Resultados</h2>
+        <div class="grid" id="lista"></div>
+      </section>
+    </div>
+  </div>
+</main>
+
+<footer>
+  <div class="wrap">
+    <ul>
+      <li><a href="resultados.html?op=venta">Comprar</a></li>
+      <li><a href="resultados.html?op=arriendo">Arrendar</a></li>
+      <li><a href="favoritos.html">Favoritos</a></li>
+      <li><a href="ayuda.html#faq">Preguntas frecuentes</a></li>
+      <li><a href="ayuda.html#contacto">Contacto</a></li>
+    </ul>
+    <p>Prototipo académico. Los inmuebles, precios y datos de contacto son ficticios.</p>
+  </div>
+</footer>
+<div id="anuncio" role="status" aria-live="polite"></div>
+<script src="js/data.js"></script>
+<script src="js/app.js"></script>
+</body>
+</html>

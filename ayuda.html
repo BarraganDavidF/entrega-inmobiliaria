@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Servicios y ayuda · Hábitat Inmobiliaria</title>
+<meta name="description" content="Preguntas frecuentes y contacto con la inmobiliaria.">
+<link rel="stylesheet" href="css/styles.css">
+</head>
+<body data-page="ayuda">
+<a class="skip" href="#contenido">Saltar al contenido</a>
+<header class="site-header">
+  <div class="wrap">
+    <div class="bar">
+      <a class="logo" href="index.html" aria-label="Hábitat Inmobiliaria, ir al inicio">Hábitat<span>.</span></a>
+      <button id="menu-btn" type="button" aria-expanded="false" aria-controls="nav-principal">Menú <span class="badge" data-fav-badge hidden><span data-fav-count>0</span><span class="sr-only"> favoritos guardados</span></span></button>
+    </div>
+    <div class="header-wrap">
+    <nav id="nav-principal" aria-label="Principal">
+      <a href="resultados.html?op=venta">Comprar</a>
+      <a href="resultados.html?op=arriendo">Arrendar</a>
+      <a href="favoritos.html">Favoritos <span class="badge" data-fav-badge hidden><span data-fav-count>0</span><span class="sr-only"> guardados</span></span></a>
+      <a href="ayuda.html">Servicios y ayuda</a>
+      <a href="cuenta.html">Mi cuenta</a>
+    </nav>
+    </div>
+  </div>
+</header>
+
+<main id="contenido">
+  <div class="wrap">
+    <div class="cabecera-res"><h1>Servicios y ayuda</h1></div>
+    <div class="dos-col">
+      <section id="faq" aria-labelledby="t-faq">
+        <h2 id="t-faq">Preguntas frecuentes</h2>
+        <details class="faq"><summary>¿Cómo guardo un inmueble en favoritos?</summary><p>Toca el botón «Guardar» en la tarjeta o en la ficha del inmueble. Luego lo encuentras en Favoritos, en el menú principal.</p></details>
+        <details class="faq"><summary>¿Cómo comparo inmuebles?</summary><p>En Favoritos marca «Comparar» en hasta tres inmuebles y verás una tabla con sus características.</p></details>
+        <details class="faq"><summary>¿Qué requisitos piden para arrendar?</summary><p>Cada inmueble en arriendo muestra sus requisitos en la ficha. Normalmente se solicita documento de identidad, certificado laboral y un codeudor o póliza.</p></details>
+        <details class="faq"><summary>¿Qué tan actualizados están los precios?</summary><p>Cada publicación muestra la fecha de su última actualización para que sepas qué tan reciente es la información.</p></details>
+        <details class="faq"><summary>¿Necesito una cuenta para guardar favoritos?</summary><p>En este prototipo los favoritos se guardan en tu navegador. Con una cuenta podrías verlos desde cualquier dispositivo.</p></details>
+      </section>
+      <section id="contacto" class="caja" aria-labelledby="t-con">
+        <h2 id="t-con">Contáctanos</h2>
+        <p>Lunes a sábado, 8:00 a. m. a 6:00 p. m. · <a href="tel:+576010000000">(601) 000 0000</a></p>
+        <form id="form-ayuda" novalidate>
+          <div class="campo"><label for="a-nombre">Nombre</label><input id="a-nombre" autocomplete="name"></div>
+          <div class="campo"><label for="a-correo">Correo electrónico</label><input id="a-correo" type="email" autocomplete="email"></div>
+          <div class="campo"><label for="a-msg">¿En qué podemos ayudarte?</label><textarea id="a-msg"></textarea></div>
+          <p class="error" id="a-error" role="alert" hidden></p>
+          <button class="btn" type="submit">Enviar consulta</button>
+          <p class="ok" id="a-ok" role="status" hidden>Gracias. Recibimos tu consulta y te responderemos pronto.</p>
+        </form>
+      </section>
+    </div>
+  </div>
+</main>
+
+<footer>
+  <div class="wrap">
+    <ul>
+      <li><a href="resultados.html?op=venta">Comprar</a></li>
+      <li><a href="resultados.html?op=arriendo">Arrendar</a></li>
+      <li><a href="favoritos.html">Favoritos</a></li>
+      <li><a href="ayuda.html#faq">Preguntas frecuentes</a></li>
+      <li><a href="ayuda.html#contacto">Contacto</a></li>
+    </ul>
+    <p>Prototipo académico. Los inmuebles, precios y datos de contacto son ficticios.</p>
+  </div>
+</footer>
+<div id="anuncio" role="status" aria-live="polite"></div>
+<script src="js/data.js"></script>
+<script src="js/app.js"></script>
+</body>
+</html>

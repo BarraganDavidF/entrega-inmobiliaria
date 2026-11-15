@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Mi cuenta · Hábitat Inmobiliaria</title>
+<meta name="description" content="Inicia sesión o crea tu cuenta.">
+<link rel="stylesheet" href="css/styles.css">
+</head>
+<body data-page="cuenta">
+<a class="skip" href="#contenido">Saltar al contenido</a>
+<header class="site-header">
+  <div class="wrap">
+    <div class="bar">
+      <a class="logo" href="index.html" aria-label="Hábitat Inmobiliaria, ir al inicio">Hábitat<span>.</span></a>
+      <button id="menu-btn" type="button" aria-expanded="false" aria-controls="nav-principal">Menú <span class="badge" data-fav-badge hidden><span data-fav-count>0</span><span class="sr-only"> favoritos guardados</span></span></button>
+    </div>
+    <div class="header-wrap">
+    <nav id="nav-principal" aria-label="Principal">
+      <a href="resultados.html?op=venta">Comprar</a>
+      <a href="resultados.html?op=arriendo">Arrendar</a>
+      <a href="favoritos.html">Favoritos <span class="badge" data-fav-badge hidden><span data-fav-count>0</span><span class="sr-only"> guardados</span></span></a>
+      <a href="ayuda.html">Servicios y ayuda</a>
+      <a href="cuenta.html">Mi cuenta</a>
+    </nav>
+    </div>
+  </div>
+</header>
+
+<main id="contenido">
+  <div class="wrap cuenta-wrap">
+    <h1>Mi cuenta</h1>
+    <div class="tabs" role="tablist" aria-label="Acceso a la cuenta">
+      <button type="button" role="tab" id="tab-login" aria-selected="true" aria-controls="panel-login">Iniciar sesión</button>
+      <button type="button" role="tab" id="tab-reg" aria-selected="false" aria-controls="panel-reg" tabindex="-1">Registrarse</button>
+    </div>
+    <section class="caja" id="panel-login" role="tabpanel" aria-labelledby="tab-login">
+      <form class="cuenta" data-ok="Prototipo: aquí se iniciaría tu sesión." novalidate>
+        <div class="campo"><label for="l-correo">Correo electrónico</label><input id="l-correo" type="email" autocomplete="email" required></div>
+        <div class="campo"><label for="l-pass">Contraseña</label><input id="l-pass" type="password" autocomplete="current-password" required></div>
+        <button class="btn" type="submit">Iniciar sesión</button>
+        <p class="ok msg" role="status" hidden></p>
+      </form>
+    </section>
+    <section class="caja" id="panel-reg" role="tabpanel" aria-labelledby="tab-reg" hidden>
+      <form class="cuenta" data-ok="Prototipo: aquí se crearía tu cuenta." novalidate>
+        <div class="campo"><label for="r-nombre">Nombre</label><input id="r-nombre" autocomplete="name" required></div>
+        <div class="campo"><label for="r-correo">Correo electrónico</label><input id="r-correo" type="email" autocomplete="email" required></div>
+        <div class="campo"><label for="r-pass">Contraseña</label><input id="r-pass" type="password" autocomplete="new-password" required></div>
+        <button class="btn" type="submit">Crear cuenta</button>
+        <p class="ok msg" role="status" hidden></p>
+      </form>
+    </section>
+  </div>
+</main>
+
+<footer>
+  <div class="wrap">
+    <ul>
+      <li><a href="resultados.html?op=venta">Comprar</a></li>
+      <li><a href="resultados.html?op=arriendo">Arrendar</a></li>
+      <li><a href="favoritos.html">Favoritos</a></li>
+      <li><a href="ayuda.html#faq">Preguntas frecuentes</a></li>
+      <li><a href="ayuda.html#contacto">Contacto</a></li>
+    </ul>
+    <p>Prototipo académico. Los inmuebles, precios y datos de contacto son ficticios.</p>
+  </div>
+</footer>
+<div id="anuncio" role="status" aria-live="polite"></div>
+<script src="js/data.js"></script>
+<script src="js/app.js"></script>
+</body>
+</html>
